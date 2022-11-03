@@ -1,11 +1,11 @@
-import './App.css';
-import Pokemon from './components/PeticionApi'
+import React from 'react';
+import Main from './components/main'
+import './components/Pokemon.css'
 
 function App() {
   return (
     <div className="App">
-
-
+     <Main/>
     </div>
   );
 }

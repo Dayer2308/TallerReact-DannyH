@@ -37,6 +37,7 @@ const Main = () => {
   useEffect(() => {
     pokeFun();
   }, [url]);
+  
   return (
     <div>
       <h1 className="Titulo">Mundo Pokemon</h1>

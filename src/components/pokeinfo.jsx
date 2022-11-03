@@ -14,10 +14,10 @@ const Pokeinfo = ({ data }) => {
             alt=""
           />
           <div className="habilidades">
-            {data.abilities.map((poke) => {
+            {data.abilities.map((poke,i) => {
               return (
                 <>
-                  <div className="grupo">
+                  <div className="grupo" key={i}>
                     <h2>{poke.ability.name}</h2>
                   </div>
                 </>
@@ -25,11 +25,11 @@ const Pokeinfo = ({ data }) => {
             })}
           </div>
           <div className="base-stat">
-            {data.stats.map((poke) => {
+            {data.stats.map((poke,i) => {
               return (
-                <>
+                <div key={i}>
                   <h3>{poke.stat.name}:{poke.base_stat}</h3>
-                </>
+                </div>
               );
             })}
           </div>

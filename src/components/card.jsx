@@ -11,7 +11,7 @@ const Card = ({ pokemon, loading, infoPokemon }) => {
         pokemon.map((item) => {
           return (
             <>
-              <div className="Card" key={item.id} onClick={()=>infoPokemon(item)}>
+              <div className="Card" key={item.id} id={item.id} onClick={()=>infoPokemon(item)}>
                 <h2>{item.id}</h2>
                 <img src={item.sprites.front_default} alt="" />
                 <h2>{item.name}</h2>

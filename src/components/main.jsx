@@ -39,7 +39,8 @@ const Main = () => {
   }, [url]);
   return (
     <div>
-      <h1>Mundo Pokemon</h1>
+      <h1 className="Titulo">Mundo Pokemon</h1>
+      <h2 className="Titulo">Seleccione un pokemon para ver sus stats</h2>
       <div className="Container">
         <div className="left-content">
           <Card
@@ -48,15 +49,15 @@ const Main = () => {
             infoPokemon={(poke) => setPokeDex(poke)}
           />
           <div className="btn-group">
-            <button onClick={()=>{
+            {prevUrl && <button onClick={()=>{
                 setPokeData([]);
                 setUrl(prevUrl);
-            }}>Anterior</button>
+            }}>Anterior</button>}
 
-            <button onClick={()=>{
+            {nextUrl && <button onClick={()=>{
                 setPokeData([]);
                 setUrl(nextUrl);
-            }}>Siguiente</button>
+            }}>Siguiente</button>}
 
           </div>
         </div>

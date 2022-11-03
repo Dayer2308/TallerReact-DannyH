@@ -16,11 +16,9 @@ const Pokeinfo = ({ data }) => {
           <div className="habilidades">
             {data.abilities.map((poke,i) => {
               return (
-                <>
                   <div className="grupo" key={i}>
                     <h2>{poke.ability.name}</h2>
                   </div>
-                </>
               );
             })}
           </div>
